@@ -5,15 +5,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex space-x-6">
             <a
-              href="https://github.com/votre-username"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-accent transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/votre-profil"
+              href="https://linkedin.com/in/enzo-cuoc"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-accent transition-colors"
@@ -22,7 +14,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} - Créé avec passion
+            © {new Date().getFullYear()} - Enzo Cuoc
           </p>
         </div>
       </div>
