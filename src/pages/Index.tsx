@@ -48,7 +48,7 @@ const Index = () => {
       <section className="container-section min-h-[80vh] flex flex-col justify-center">
         <div className="max-w-3xl mx-auto text-center animate-fade-up">
           <h1 className="text-6xl font-bold mb-6">
-            Bonjour, je suis <span className="text-accent">Votre Nom</span>
+            Bonjour, je suis <span className="text-accent">Portfolio Enzo</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Développeur Full Stack passionné par la création d'expériences web exceptionnelles
