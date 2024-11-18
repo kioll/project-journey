@@ -2,11 +2,16 @@ import { useEffect } from "react";
 import ProjectCard from "@/components/ProjectCard";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
-import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
-import EducationSection from "@/components/EducationSection";
 
 const projects = [
+  {
+    title: "US Electric Bus Adoption Analysis - Accenture",
+    description: "Developed a comprehensive reporting solution analyzing electric bus adoption trends across the United States. Transformed raw data using Snowflake and created interactive dashboards with Power BI to provide actionable insights for stakeholders.",
+    technologies: ["Power BI", "Snowflake", "Data Analysis", "Data Transformation", "Dashboard Design"],
+    imageUrl: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80",
+    githubUrl: "https://github.com/votre-username/bus-adoption-analysis",
+  },
   {
     title: "TenTrack - Tennis Analysis Project",
     description: "Developed a sophisticated machine learning model using Python and YOLO for tennis match analysis, implementing advanced computer vision techniques for real-time tracking.",
@@ -77,7 +82,7 @@ const Index = () => {
         <div className="text-center mb-12">
           <h2 className="section-title">Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="animate-on-scroll">
               <ProjectCard {...project} />
@@ -86,8 +91,6 @@ const Index = () => {
         </div>
       </section>
 
-      <ExperienceSection />
-      <EducationSection />
       <ContactSection />
       <Footer />
     </div>
