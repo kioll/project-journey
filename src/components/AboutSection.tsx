@@ -1,13 +1,41 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { useEffect, useRef } from "react";
 
 const AboutSection = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="container-section" id="about">
       <div className="max-w-3xl mx-auto text-center">
         <Badge className="mb-4">About</Badge>
         <h2 className="section-title">Summary</h2>
-        <div className="animate-on-scroll">
+        <div ref={sectionRef} className="animate-on-scroll">
           <Card className="p-6 text-left">
             <p className="text-lg leading-relaxed mb-4">
               Seeking a 6-month internship in the field of data science to leverage my strong analytical skills, programming proficiency, and theoretical knowledge gained through my Master's studies at Efrei Paris.
